@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Personal Website from Adrian Krehl</title>
-    <link>//localhost:8080/</link>
-    <description>Recent content on Personal Website from Adrian Krehl</description>
+    <title>Adrian Krehl | Personal Website</title>
+    <link>//adriankrehl.com/</link>
+    <description>Recent content on Adrian Krehl | Personal Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="//localhost:8080/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//adriankrehl.com/index.xml" rel="self" type="application/rss+xml" />
     
   </channel>
 </rss>
