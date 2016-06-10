@@ -5,8 +5,8 @@
 		<title>Adrian Krehl | Personal Website</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
 		<link rel="stylesheet" href="/assets/css/main.css" />
-
 		<link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-touch-icon-57x57.png?v=vMMNPOvAXd">
 		<link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-touch-icon-60x60.png?v=vMMNPOvAXd">
 		<link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-touch-icon-72x72.png?v=vMMNPOvAXd">
@@ -66,12 +66,12 @@ body {
 				</header>
 				<footer>
 					<ul class="icons">
-						<li><a title="Follow me @akrehl" href="https://twitter.com/akrehl" class="fa-twitter">Twitter</a></li>
-						<li><a title="Fork me" href="https://github.com/akrehl" class="fa-github">Github</a></li>
-						<li><a title="See what i read" href="https://medium.com/@akrehl" class="fa-medium">Blog</a></li>
-						<li><a title="See my projects" href="https://akrehl.com" class="fa-briefcase">Projects</a></li>
-						<li><a title="Connect with me" href="https://www.linkedin.com/in/adriankrehl" class="fa-linkedin">LinkedIn</a></li>
-						<li><a title="Connect with me" href="https://www.xing.com/profile/Adrian_Krehl" class="fa-xing">Xing</a></li>
+						<li><a data-placement="bottom" data-toggle="tooltip" data-original-title="Follow me @akrehl" href="https://twitter.com/akrehl" class="fa-twitter">Twitter</a></li>
+						<li><a data-placement="bottom" data-toggle="tooltip" data-original-title="Fork me" href="https://github.com/akrehl" class="fa-github">Github</a></li>
+						<li><a data-placement="bottom" data-toggle="tooltip" data-original-title="See what i read" href="https://medium.com/@akrehl" class="fa-medium">Blog</a></li>
+						<li><a data-placement="bottom" data-toggle="tooltip" data-original-title="See my projects" href="https://akrehl.com" class="fa-briefcase">Projects</a></li>
+						<li><a data-placement="bottom" data-toggle="tooltip" data-original-title="Connect with me" href="https://www.linkedin.com/in/adriankrehl" class="fa-linkedin">LinkedIn</a></li>
+						<li><a data-placement="bottom" data-toggle="tooltip" data-original-title="Connect with me" href="https://www.xing.com/profile/Adrian_Krehl" class="fa-xing">Xing</a></li>
 					</ul>
 				</footer>
 			</section>
@@ -83,10 +83,17 @@ body {
 			</footer>
 		</div>
 		<script>
-if ('addEventListener' in window) {
-	window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
-	document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
-}
+			if ('addEventListener' in window) {
+				window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+				document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+			}
+		</script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="/assets/js/bootstrap.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('[data-toggle="tooltip"]').tooltip();
+			});
 		</script>
 	</body>
 </html>
