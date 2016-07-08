@@ -38,6 +38,6 @@
 			"density": 4
 		}
 	],
-	"start_url": "https:\/\/www.adriankrehl.com",
+	"start_url": "https:\/\/www.adriankrehl.com?home=true",
 	"display": "standalone"
 }
