@@ -7,6 +7,7 @@ var gulp = require('gulp'),
   concat = require('gulp-concat'),
   cssnano = require('gulp-cssnano'),
   uncss = require('gulp-uncss'),
+  strip = require('gulp-strip-css-comments'),
   rename = require('gulp-rename');
 
 ////////////////////////////////////////
@@ -39,6 +40,7 @@ gulp.task('uncss', function() {
       browsers: ['last 2 versions'],
       cascade: false
     }))
+    .pipe(strip({preserve: false}))
     .pipe(cssnano())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('assets/css'))
