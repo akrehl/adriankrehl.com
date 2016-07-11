@@ -1,5 +1,4 @@
 var gulp = require('gulp'),
-  uglify = require('gulp-uglify'),
   autoprefixer = require('gulp-autoprefixer'),
   browserSync = require('browser-sync'),
   reload = browserSync.reload,
@@ -13,14 +12,14 @@ var gulp = require('gulp'),
 ////////////////////////////////////////
 // Scripts
 ////////////////////////////////////////
-gulp.task('scripts', function() {
-  gulp.src(['assets/js/test.js', '!assets/js/*.min.js'])
+/*gulp.task('scripts', function() {
+  gulp.src(['assets/js/test.js', '!assets/js/!*.min.js'])
     .pipe(plumber())
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
     .pipe(gulp.dest('assets/js'))
     .pipe(reload({stream: true}));
-});
+});*/
 
 ////////////////////////////////////////
 // Css
@@ -38,10 +37,10 @@ gulp.task('uncss', function() {
     }))
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
-      cascade: false
+      cascade: true
     }))
     .pipe(strip({preserve: false}))
-    .pipe(cssnano())
+    //.pipe(cssnano())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('assets/css'))
     .pipe(reload({stream: true}));
@@ -74,12 +73,12 @@ gulp.task('browser-sync', function() {
 ////////////////////////////////////////
 gulp.task('watch', function() {
   "use strict";
-  gulp.watch('assets/js/test.js', ['scripts']);
+  //gulp.watch('assets/js/test.js', ['scripts']);
   gulp.watch('index.html', ['html']);
-  gulp.watch('assets/css/test.css', ['css']);
+  gulp.watch('assets/css/main.css', ['uncss']);
 });
 
 ////////////////////////////////////////
 // Default
 ////////////////////////////////////////
-gulp.task('default', ['scripts', 'css', 'html', 'browser-sync', 'watch']);
+gulp.task('default', ['uncss', 'html', 'browser-sync', 'watch']);
