@@ -39,10 +39,9 @@
 
 			ga('create', 'UA-38170641-1', 'auto');
 			ga('send', 'pageview');
-
 		</script>-->
 	</head>
-	<body class="is-loading">
+	<body>
 		<div id="wrapper">
 			<section id="main">
 				<header>
@@ -52,12 +51,12 @@
 				</header>
 				<footer>
 					<ul class="icons">
-						<li><a data-placement="bottom" data-toggle="tooltip" data-original-title="Follow me @akrehl" href="https://twitter.com/akrehl" class="fa-twitter">Twitter</a></li>
-						<li><a data-placement="bottom" data-toggle="tooltip" data-original-title="Fork my projects" href="https://github.com/akrehl" class="fa-github">Github</a></li>
-						<li><a data-placement="bottom" data-toggle="tooltip" data-original-title="See what I read" href="https://medium.com/@akrehl" class="fa-medium">Blog</a></li>
-						<li><a data-placement="bottom" data-toggle="tooltip" data-original-title="See my projects" href="https://akrehl.com" class="fa-briefcase">Projects</a></li>
-						<li><a data-placement="bottom" data-toggle="tooltip" data-original-title="Connect with me" href="https://www.linkedin.com/in/adriankrehl" class="fa-linkedin">LinkedIn</a></li>
-						<li><a data-placement="bottom" data-toggle="tooltip" data-original-title="Schreiben Sie mir" href="https://www.xing.com/profile/Adrian_Krehl" class="fa-xing">Xing</a></li>
+						<li><a title="Twitter" data-tooltip="Follow me @akrehl" href="https://twitter.com/akrehl" class="fa-twitter tooltip"></a></li>
+						<li><a title="Github" data-tooltip="Fork my projects" href="https://github.com/akrehl" class="fa-github tooltip"></a></li>
+						<li><a title="Medium" data-tooltip="See what I read" href="https://medium.com/@akrehl" class="fa-medium tooltip"></a></li>
+						<li><a title="Projects & Blog" data-tooltip="See my projects" href="https://akrehl.com" class="fa-briefcase tooltip"></a></li>
+						<li><a title="LinkedIn" data-tooltip="Connect with me" href="https://www.linkedin.com/in/adriankrehl" class="fa-linkedin tooltip"></a></li>
+						<li><a title="Xing" data-tooltip="Schreiben Sie mir" href="https://www.xing.com/profile/Adrian_Krehl" class="fa-xing tooltip"></a></li>
 					</ul>
 				</footer>
 			</section>
@@ -70,16 +69,8 @@
 		</div>
 		<script>
 			if ('addEventListener' in window) {
-				window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
 				document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
 			}
-		</script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script src="/assets/js/bootstrap.min.js"></script>
-		<script>
-			$(document).ready(function(){
-				$('[data-toggle="tooltip"]').tooltip();
-			});
 		</script>
 	</body>
 </html>

@@ -374,7 +374,7 @@ ul {
         border-radius: 100%;
         border: solid 1px #c8cccf;
         line-height: 3.75em;
-        overflow: hidden;
+        overflow: visible;
         text-align: center;
         text-indent: 3.75em;
         white-space: nowrap; }

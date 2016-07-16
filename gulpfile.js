@@ -26,14 +26,13 @@ var gulp = require('gulp'),
 ////////////////////////////////////////
 gulp.task('uncss', function() {
   "use strict";
-  gulp.src(['assets/css/bootstrap.min.css', 'assets/css/font-awesome.min.css', 'assets/css/main.css'])
+  gulp.src(['assets/css/font-awesome.min.css', 'assets/css/main.css', 'assets/css/tooltip.css'])
     .pipe(plumber())
     .pipe(concat('app.css'))
     .pipe(uncss({
       html: ['index.html'],
       timeout: 2000,
-      ignore: ['.tooltip', '.tooltip-inner', '.tooltip-bottom', '.tooltip-arrow',
-        '*:before, *:after', '.fade' , '.tooltip.bottom', '.tooltip.in', '.tooltip.bottom .tooltip-arrow']
+      ignore: ['a.tooltip:after', 'a.tooltip:hover:after', 'a.tooltip']
     }))
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
