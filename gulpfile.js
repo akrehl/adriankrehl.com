@@ -7,7 +7,10 @@ var gulp = require('gulp'),
   cssnano = require('gulp-cssnano'),
   uncss = require('gulp-uncss'),
   strip = require('gulp-strip-css-comments'),
+  critical = require('critical'),
+  inlineCss = require('gulp-inline-css'),
   rename = require('gulp-rename');
+
 
 ////////////////////////////////////////
 // Scripts
@@ -75,6 +78,31 @@ gulp.task('watch', function() {
   //gulp.watch('assets/js/test.js', ['scripts']);
   gulp.watch('index.html', ['html']);
   gulp.watch('assets/css/main.css', ['uncss']);
+});
+
+////////////////////////////////////////
+// Critical CSS TODO: not working
+////////////////////////////////////////
+gulp.task('critical', function () {
+  critical.generate({
+    inline: true,
+    base: './',
+    src: 'index.html',
+    dest: '../gh-pages',
+    minify: true,
+    width: 1920,
+    height: 1080,
+    ignore: ['font-face']
+  });
+});
+
+////////////////////////////////////////
+// Inline CSS TODO: not working
+////////////////////////////////////////
+gulp.task('inline', function() {
+  return gulp.src('./index.html')
+    .pipe(inlineCss())
+    .pipe(gulp.dest('../gh-pages'));
 });
 
 ////////////////////////////////////////
